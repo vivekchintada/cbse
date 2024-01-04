@@ -65,121 +65,124 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mwe} % for blindtext and example-image-a in example
+\usepackage{esvect}
 \usepackage{wrapfig}
+\usepackage{physics}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
 
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
 
 \begin{document}
 
 
 	\begin{enumerate}	
-\item  Find the angle between the line $\vec{r} = (2\vec{i}-\vec{j}+\vec{k})+ \lambda(3\vec{i}-\vec{j}+2\vec{k}$ and the plane $\vec{r}\cdot(\vec{i} +\vec{j}+\vec{k}) =3$.
+		\item  Find the angle between the line $\overrightarrow{r}$ = $\brak{2\hat{i}-\hat{j}+\hat{k}}$+ $\lambda\brak{3\hat{i}-\hat{j}+2\hat{k}}$ and the plane $\overrightarrow{r}\cdot\brak{\hat{i} +\hat{j}+\hat{k}}=3$.
 
-\item Find the co-ordinates of the point, where the line $\frac{x+2}{1}=\frac{y-5}{3}=\frac{z+1}{5}$ cuts the $yz$-plane.
+\item Find the co-ordinates of the point, where the line $\dfrac{x+2}{1}=\dfrac{y-5}{3}=\dfrac{z+1}{5}$ cuts the $yz$-plane.
 
-\item if \begin{align*}y= 5e^{7x}+6e^{-7x}\end{align*}  , show that $\frac{d^2y}{dx^2}=49y$.
+\item if \begin{align*}y= 5e^{7x}+6e^{-7x}\end{align*}  , show that $\dfrac{d^2y}{dx^2}=49y$.
 
-\item if $A$ is a square matrix of order $2$ and $\begin{vmatrix}
-		A
-		\end{vmatrix} = 4$, then find the value of $\begin{vmatrix} 2AA^\prime\end{vmatrix}$, where $A^\prime$ is the transpose of matrix A.
+	\item if $A$ is a square matrix of order $2$ and $\mydet{A}=4$, then find the value of $\mydet{2.AA^{1}}$, where $A^\prime$ is the transpose of matrix A.
 
 \item Find the order of differential equation of the family of circles of radius $3$ units.
 
-\item Find the value of $(x-y)$ from the matrix equation
-	$
-	2\begin{bmatrix}
-	x & 5 \\
-	7 & y-3 \\
-	\end{bmatrix}+
-	\begin{bmatrix}
-	    -3 & -4 \\
-	    1  & 2 \\
-	\end{bmatrix}=
-	\begin{bmatrix}
-		7 & 6 \\
-		15 & 14 \\
-	\end{bmatrix}
-        $
-\item solve the equation differential equation \begin{align*}(y+3x^2)\frac{dx}{dy}=x\end{align*}.
+\item Find the value of $\brak{x-y}$ from the matrix equation 
+	\begin{align*}
+		2\myvec{x & 5\\7 & y-3}+\myvec{-3 & -4\\1 & 2}=\myvec{7 & 6\\15 & 14}
+	\end{align*}	
+	
+\item solve the equation differential equation \begin{align*}\brak{y+3x^2}\frac{dx}{dy}=x\end{align*}.
 
-\item Find \begin{align*}\int e^x(\cos x-\sin x)\csc^2 x dx\end{align*}
+	\item Find \begin{align*}\int e^x\brak{\cos x-\sin x}\csc^2 x dx\end{align*}
 
-\item Using vectors, prove that the points $(2,-1,3), (3,-5,1)$ and $(-1,11,9)$ are collinear.
+\item Using vectors, prove that the points $\brak{2,-1,3}$, $\brak{3,-5,1}$ and $\brak{-1,11,9}$ are collinear.
 
-\item For any two vectors $\vec{a}$ and $\vec{b}$ , prove that \begin{align*}(\vec{a}*\vec{b})^2=\vec{a}^2\vec{b}^2-(\vec{a}.\vec{b})^2\end{align*}
+\item For any two vectors $\overrightarrow{a}$ and $\overrightarrow{b}$ , prove that \begin{align*}\brak{\overrightarrow{a} \times \overrightarrow{b}}^2=\overrightarrow{a}^2\overrightarrow{b}^2-\brak{\overrightarrow{a}.\overrightarrow{b}}^2\end{align*}
 
 \item Find \begin{align*}\int \frac{x-1}{(x-2)(x-3)}\,dx\end{align*}
 
-	\item Integrate \begin{align*}\frac{e^x}{\sqrt{5-4e^x-e^{2x}}}\end{align*} with respect to $x$.
+\item Integrate \begin{align}\frac{e^x}{\sqrt{5-4e^x-e^{2x}}}\end{align} with respect to $x$.
 
-\item If $P(A)=0.6, P(B)=0.5$ and $P(B|A)=0.4$, find $P(A \cup B)$ and $P(A|B)$. 
+\item If $P\brak{A}=0.6, P\brak{B}=0.5$ and $P\brak{B|A}=0.4$, find $P\brak{A \cup B}$ and $P\brak{A|B}$. 
 
 \item If an operation on the set of integers $\mathbb{Z}$ is defined by $a*b=2a^2+b$, then find $(i)$ whether it is binary or not,  and $(ii)$ If a binary, then is it commutative or not.
 
 
 \item Four cards are drawn one by one with replacement from a well-shuffeled deck of playing cards. Find the probability that atleast three cards are diamonds.
 
-\item The Probability of two students $A$ and $B$ coming to school on time are $\frac{2}{7}$ and $\frac{4}{7}$, respectively. Assuming that the events '$A$ coming on time' and '$B$ coming on time' are independent, find the probability of only one of them coming to school on time.
+\item The Probability of two students $A$ and $B$ coming to school on time are $\dfrac{2}{7}$ and $\dfrac{4}{7}$, respectively. Assuming that the events '$A$ coming on time' and '$B$ coming on time' are independent, find the probability of only one of them coming to school on time.
 
-\item if \begin{align*}x^py^q=(x+y)^{p+q}\end{align*} prove that $\frac{dy}{dx}=\frac{y}{x}$ and $\frac{d^2y}{dx^2}=0$.
+\item if \begin{align*}x^py^q=(x+y)^{p+q}\end{align*} and prove that $\dfrac{dy}{dx}=\dfrac{y}{x}$ and $\dfrac{d^2y}{dx^2}=0$.
 		
-\item Find \begin{align*}\int (\sin x \sin 2x \sin 3x) dx\end{align*}
+	\item Find \begin{align*}\int \brak{\sin x \sin 2x \sin 3x} dx\end{align*}
 
-\item Difference \begin{align*}\tan^{-1}\frac{3x-x^3}{1-3x^2}\end{align*}, $|x|<\frac{1}{\sqrt{3}}$ w.r.t $\tan^{-1}\frac{x}{\sqrt{1-x^2}}$
+\item Differentiate \begin{align*}\tan^{-1}\frac{3x-x^3}{1-3x^2}\end{align*}, $|x|<\dfrac{1}{\sqrt{3}}$ w.r.t $\tan^{-1}\dfrac{x}{\sqrt{1-x^2}}$
 
-\item If \begin{align*}\sqrt{1-x^2}+\sqrt{1-y^2}=a(x-y)\end{align*}, $|x|<1,|y|<1$, show that $\frac{dy}{dx}=\sqrt{\frac{1-y^2}{1-x^2}}$
+\item If \begin{align*}\sqrt{1-x^2}+\sqrt{1-y^2}=a\brak{x-y} |x|<1,|y|<1\end{align*}, show that $\dfrac{dy}{dx}=\sqrt{\dfrac{1-y^2}{1-x^2}}$
 
-\item Find the particular solution of the differential equation :\begin{align*}x\frac{dy}{dx}\sin\frac{y}{x}+x-y\sin\frac{y}{x}=0\end{align*}, given that $y(1)=\frac{\pi}{2}$.
-
-	\item Find the particular solution of the differential equation :\begin{align*}(1+e^{2x})\,dy+(1+y^2)e^x\,dx=0\end{align*} given that $y(0)=1$.	
+\item Find the particular solution of the differential equation :
+	\begin{align*}
+             x\frac{dy}{dx}\sin\brak{\frac{y}{x}}+x-y\sin\brak{\frac{y}{x}}=0
+        \end{align*}, given that $y(1)=\dfrac{\pi}{2}$.
+\item Find the particular solution of the differential equation :
+	\begin{align*}
+	      \brak{1+e^{2x}}dy+\brak{1+y^2}e^x dx=0
+	\end{align*} given that $y(0)=1$.	
 
 \item Prove that the relation $R$ in the set $A=\{1,2,3,4,5,6,7\}$ given by $R=\{(a,b) : |a-b|$ is even$\}$ is an equivalence relation.
 
-\item Show that the function $f$ in $A=\mathbb{R}-\{\frac{2}{3}\}$ defined as $f(x)=\frac{4x+3}{6x-4}$ is one-one and onto. Hence, find $f^{-1}$.
+\item Show that the function $f$ in $A=R-\{\dfrac{2}{3}\}$ defined as $f(x)=\dfrac{4x+3}{6x-4}$ is one-one and onto. Hence, find $f^{-1}$.
 			
-\item Find whether the function $f(x)=\cos(2x+\frac{\pi}{4})$; is increasing or decreasing in the interval $\frac{3\pi}{8}<x<\frac{5\pi}{8}$.
+\item Find whether the function $f(x)=\cos\brak{2x+\frac{\pi}{4}}$; is increasing or decreasing in the interval $\dfrac{3\pi}{8}<x<\dfrac{5\pi}{8}$.
 
-\item Find the equation of the plane passing through the point $(-1,3,2)$ and perpendicular to the planes $x+2y+3z=5$ and $3x+3y+z=0$.	
+\item Find the equation of the plane passing through the point $(\brak{-1,3,2}$ and perpendicular to the planes $x+2y+3z=5$ and $3x+3y+z=0$.	
 
-\item Prove that \begin{align*}\sin^{-1}\frac{4}{5}+\tan^{-1}\frac{5}{12}+\cos^{-1}\frac{63}{65}=\frac{\pi}{2}\end{align*}
+\item Prove that 
+	\begin{align*}
+		\sin^{-1}\frac{4}{5}+\tan^{-1}\frac{5}{12}+\cos^{-1}\frac{63}{65}=\frac{\pi}{2}
+        \end{align*}
 
-\item \begin{align*}\int_{0}^{1}(|x-1|+|x-2|+|x-4|)\,dx\end{align*}
+\item Evaluate 
+	\begin{align*}\int_{0}^{1}\brak{|x-1|+|x-2|+|x-4|} dx\end{align*}
 
-\item Using vectors find the value of x such that the four points $A(x,5,-1)$, $B(3,2,1)$ ,$C(4,5,5)$ and $D(4,2,-2)$ are coplanar.	
+\item Using vectors find the value of x such that the four points $A\brak{x,5,-1}$, $B\brak{3,2,1}$ ,$C\brak{4,5,5}$ and $D\brak{4,2,-2}$ are coplanar.	
 
 \item If $x,y,z$ are the different and $\triangle =\begin{vmatrix}    
 		                                        x & x^2 & x^3-1\\
 							y & y^2 & y^3-1\\
-							z & z^2 &z^3-1\\
-\end{vmatrix}=0$, then using properties of determinants , show that $xyz=1$.
+							z & z^2 & z^3-1
+                                                   \end{vmatrix}=0$, then using properties of determinants , show that $xyz=1$.
 
-\item Using integration, find the area of triangle $ABC$ bounded by the lines $4x-y+5=0$, $x+y-5=0$ and $x-4y+5=0$.
+ \item Using integration, find the area of $\triangle ABC$ bounded by the lines $4x-y+5=0$, $x+y-5=0$ and $x-4y+5=0$.
 
-\item Using integration, find the area of the following region:\begin{align*}{(x,y): x^2+y^2\leq 16a^2} and {y^2 \leq 6ax}\end{align*}		
+\item Using integration, find the area of the following region:
+       ${(x,y): x^2+y^2\leq 16a^2}$ and ${y^2 \leq 6ax}$	
 
-\item Find the vector equation of the line passing through $(2,1,-1)$ and parallel to the line $\vec{r}$=$(\vec{i}+\vec{j})+\lambda(2\vec{i}-\vec{j}+\vec{k})$. Also, find the distance between these two lines.
+\item Find the vector equation of the line passing through $\brak{2,1,-1}$ and parallel to the line $\overrightarrow{r}$=$\brak{\hat{i}+\hat{j}}+\lambda\brak{2\hat{i}-\hat{j}+\hat{k}}$. Also, find the distance between these two lines.
 	
-\item Find the coordinates of the foot $Q$ of the perpendicular drawn from the point $P(1,3,4)$ to the plane $2x-y+z+3=0$. Find the distance $PQ$ and the image of $P$ treating the plane as a mirror.
+\item Find the coordinates of the foot $Q$ of the perpendicular drawn from the point $P\brak{1,3,4}$ to the plane $2x-y+z+3=0$. Find the distance $PQ$ and the image of $P$ treating the plane as a mirror.
 
 \item A company manufactures two types of novelty souvenirs made of plywood. Souvenirs of type $A$ require $5$ minutes each for cutting and $10$ minutes each for assembling. Souvenirs of type $B$ require $8$ minutes each for cutting and $4$ hours for assembling. There are $3$ hours and $20$ minutes available for cutting and $4$ hours for assembling. The Profit for type $A$ souvenirs is $100$ rupees each and for type $B$ souvenirs, profit is of $120$ rupees each.How many souvenirs of each type should the company manufacture in order to maximize the profit ? Formulate the problem as LPP and then solve it graphically.
 
-\item In answering a question on a multiple choice questons with four choices in each question, out of which only one is correct, a student either guesses or copies or knows the answer. The probability that he makes a guess is $\frac{1}{4}$ and the probability that he copies is also $\frac{1}{4}$. The probability that the answer is correct, given that he copied it is $\frac{3}{4}$. Find the probability that he knows the answer to th question, given that he correctly answered it.
+\item In answering a question on a multiple choice questons with four choices in each question, out of which only one is correct, a student either guesses or copies or knows the answer. The probability that he makes a guess is $\dfrac{1}{4}$ and the probability that he copies is also $\dfrac{1}{4}$. The probability that the answer is correct, given that he copied it is $\dfrac{3}{4}$. Find the probability that he knows the answer to th question, given that he correctly answered it.
 
-\item An isosceles triangle of vertical angle $2\theta$ is inscribed in a circle  of radius $a$. Show that the area of the triangle is maximum when $\theta =\frac{\pi}{6}$.
+\item An isosceles triangle of vertical angle $2\theta$ is inscribed in a circle  of radius $a$. Show that the area of the triangle is maximum when $\theta =\dfrac{\pi}{6}$.
 
 \item Using elementry row transformations, find the inverse of the matrix
 		$\begin{bmatrix}
 			3 & 0 &-1\\
 			2 & 3 & 0\\
-			0 & 4 &1\\
+			0 & 4 &1
 		\end{bmatrix}$
 
 \item Using matrices, solve the following system of linear equations:
-	$2x+3y+10z=4$,
-	$4x+6y+5z=1$,
-	$6x+9y-20z=2$
-
-
-
+	\begin{align*}
+		2x+3y+10z=4\\
+	        4x+6y+5z=1\\
+	        6x+9y-20z=2
+	\end{align*}
 \end{enumerate}
 
 
